@@ -1,3 +1,9 @@
+"""
+Script to preprocess sentences from Tatoeba.org
+Uses the two csv files sentences.csv and links.csv, both downloadable here: https://tatoeba.org/eng/downloads
+Author: Pia Schwarz
+"""
+
 import csv
 import pprint
 import treetaggerwrapper
