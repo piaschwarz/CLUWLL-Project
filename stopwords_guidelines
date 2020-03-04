@@ -4,9 +4,7 @@ I decided to create my own list based on the word's POS tag.
 What I condered to be STOPWORDS are the words with the following tags:
 
 
-|POS TAG|Description|
-|---|---|
-|ciao|marta|
+
 
 ABR    abbreviation
 CON   conjunction
@@ -41,3 +39,11 @@ and which not.
 
 
 Marta
+
+
+
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
