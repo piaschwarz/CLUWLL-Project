@@ -3,9 +3,6 @@ I decided to create my own list based on the word's POS tag.
 
 What I condered to be STOPWORDS are the words with the following tags:
 
-
-
-
 ABR    abbreviation
 CON   conjunction
 DET:def   definite article
@@ -21,12 +18,16 @@ FW    foreign word
 
 
 I have DOUBTS whether to consider the following word tags stopwords or not:
+
 INT   interjection    ?
 NUM   numeral   ?
 PRO   pronoun   ?
 
 
+
+
 What I have so far in the LEMMAS:
+
 NOM   noun
 VER   verb
 
@@ -42,8 +43,3 @@ Marta
 
 
 
-
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
