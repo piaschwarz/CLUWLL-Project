@@ -1,8 +1,12 @@
+#Python script which reads in a collection of texts (level B1 or B2 must be specified in the file name)
+#and outputs four text files: the "treetagged" text, the list of unique lemmas, the list of unique stopwords, the list of capitalized words.
+
+
 import _json
 import treetaggerwrapper
 import nltk
-nltk.download('stopwords')
-import spacy
+#nltk.download('stopwords')
+#import spacy
 
 
 
