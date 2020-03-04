@@ -8,7 +8,7 @@ What I condered to be STOPWORDS are the words with the following tags:
 |---|---|
 |ciao|marta|
 
-ABR    abbreviation|
+ABR    abbreviation
 CON   conjunction
 DET:def   definite article
 DET:indef   indefinite article
