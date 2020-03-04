@@ -1,0 +1,38 @@
+Since I was not happy with the list of stopwords provided by nltk for the Italian language, 
+I decided to create my own list based on the word's POS tag.
+
+What I condered to be STOPWORDS are the words with the following tags:
+
+ABR   abbreviation
+CON   conjunction
+DET:def   definite article
+DET:indef   indefinite article
+LS    list symbol
+NUM   numeral
+PON   punctuation
+PRE   preposition
+PRE:det   preposition+article
+SENT    sentence marker
+SYM   symbol
+FW    foreign word
+
+
+I have DOUBTS whether to consider the following word tags stopwords or not:
+INT   interjection    ?
+NUM   numeral   ?
+PRO   pronoun   ?
+
+
+What I have so far in the LEMMAS:
+NOM   noun
+VER   verb
+
+
+According to our definition of "stopword" I can also go through the CEFR lexical lists (A1, A2, B1, B2) and decide which words are to be kicked out 
+and which not.
+
+
+
+
+
+Marta
