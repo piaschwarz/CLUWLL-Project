@@ -30,6 +30,7 @@ What I have so far in the LEMMAS:
 
 NOM   noun
 VER   verb
+ADJ     adjective
 
 
 According to our definition of "stopword" I can also go through the CEFR lexical lists (A1, A2, B1, B2) and decide which words are to be kicked out 
