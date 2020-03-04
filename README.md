@@ -8,12 +8,14 @@ directories:
 - resources (tables, images, etc)
 - ...?
 
-
+Date: March 4, 2020
 |Workpackage|Description|Responsible|Comment|
 |---|---|---|---|
-|3. provide unique lemma list & find frequency information|<ul><li>clean up the Italian unique lemma list</li><li>find out where we can get frequency information from (OpenSubtitles Corpus? Didn't Dellert want to provide us with something?</li></ul>|Marta| |
+|3. provide unique lemma list & find frequency information|<ul><li>clean up the Italian unique lemma list</li><li>find out where we can get frequency information from (OpenSubtitles Corpus? Didn't Dellert want to provide us with something?)</li></ul>|Marta| |
 |3. retrieve useful context sentences|<ul><li>select sentences that have at least 3 context words (incl. the queried word)</li><li>pseudo code how to include content word frequency information and maybe rank the potential context sentences</li></ul>|Pia| |
 
+
+Date: Feb 22nd, 2020
 |Workpackage|Description|Responsible|Comment|
 |---|---|---|---|
 |1. collect texts|50-100 texts in B1/B2 Italian (DONE)|Marta|  |
