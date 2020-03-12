@@ -2,7 +2,7 @@ The lemmatised list for B1 level is ready
 
 What I fixed:
 
-
+- apostrophe between article/prepositions (preposizioni articolate) and nouns
 - wrong words which ended up in the lemmatised list (e.g. capitalised words, entities, names)
 - non existent lemmas
 - feminine version of masculine lemmas --> converted into masculine lemma ****** STILL NEED TO DOUBLE CHECK
