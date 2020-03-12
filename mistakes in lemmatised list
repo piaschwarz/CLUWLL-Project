@@ -14,7 +14,7 @@ What I fixed:
 - the lemmatizer NEVER recognized reflexive verbs --> I hope I caught most of them, but need to double check
 
 * What to do with foreign words which are, however, used often in Italian? (sms, film, e-mail)
-* 
+
 
 
 What still needs to be done:
@@ -26,5 +26,3 @@ What still needs to be done:
 
 
 
-
-What to do with 
