@@ -1,0 +1,30 @@
+The lemmatised list for B1 level is ready
+
+What I fixed:
+
+
+- wrong words which ended up in the lemmatised list (e.g. capitalised words, entities, names)
+- non existent lemmas
+- feminine version of masculine lemmas --> converted into masculine lemma ****** STILL NEED TO DOUBLE CHECK
+- augmentative and diminutive suffixes were eliminated
+- wrong POS: words with a POS different from noun, adj, adv or verb were put into stop words list
+- when two alternative lemmas were found by the lemmatizer, i checked in the text for the right one
+- typos and ortographic mistakes in the texts (hope I caught most of them)
+- words with multiple possible POS (e.g. "quello" can be adj and pronoun): I kept them if one of the tags was a POS tag of a content word (noun, adj, verb, adv)
+- the lemmatizer NEVER recognized reflexive verbs --> I hope I caught most of them, but need to double check
+
+* What to do with foreign words which are, however, used often in Italian? (sms, film, e-mail)
+* 
+
+
+What still needs to be done:
+- double check of the B1 lemmatised list
+- lemmatised list for B2
+- upload lexical lists from the CEFR for B1 and B2 level
+- match words to lemmas by unique id (wanna do this for the future)
+
+
+
+
+
+What to do with 
