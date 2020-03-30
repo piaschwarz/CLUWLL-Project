@@ -31,26 +31,6 @@ GER-N: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
 
 
 
-PROJECT STEPS
-- have useful context sentences for all Italian B1 and B2 lemmas available
-
-- get translation of context sentences and word alignment
-
-- populate SQL database 
-- think of useful formats for these tables:
-- context sentences per lemma (and some sort of translation mapping?)
-- vocab piles: Bootstrap pile (A1/A2 words with translation)
-- All learned words (vocab the user has encountered anywhere in the app
-- Most difficult words (n most difficult words for user)
-- Most frequent Italian words (n most freq. words from the pile of all learned words)
-
-- think of architecture for frontend and backend (data structures + user interface)
-
-- implement Java Servlets + Angular App
-
-
-
-
 |Workpackage<br>March 4, 2020|Description|Responsible|Related Git Files|Comment|
 |---|---|---|---|---|
 |3. provide unique lemma list & find frequency information|<ul><li>clean up the Italian unique lemma list</li><li>find out where we can get frequency information from (OpenSubtitles Corpus? Didn't Dellert want to provide us with something?)</li></ul>|Marta| | |
