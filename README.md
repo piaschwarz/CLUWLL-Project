@@ -11,24 +11,23 @@ CURRENT PROBLEMS
 	example:
 
 LEMMA: scaricare
-[ITA-ID=3102946]
-[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel tuo giardino.
-[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel tuo giardino .
-[GER-ID=1907164]
-[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
---------------------------------------------------------------------------------------------------------------
-[ITA-ID=3102947]
-[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel suo giardino.
-[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel suo giardino .
-[GER-ID=1907164]
-[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
---------------------------------------------------------------------------------------------------------------
-[ITA-ID=3102945]
-[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel vostro giardino.
-[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel vostro giardino .
-[GER-ID=1907164]
-[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
----------------------------------------------------------------------------------------------------------------
+ITA-ID=3102946
+ITA-N: Non è stato Tom che ha scaricato della spazzatura nel tuo giardino.
+ITA-L: non essere essere|stare Tom che avere scaricare del spazzatura nel tuo giardino .
+GER-ID=1907164
+GER-N: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
+
+ITA-ID=3102947
+ITA-N: Non è stato Tom che ha scaricato della spazzatura nel suo giardino.
+ITA-L: non essere essere|stare Tom che avere scaricare del spazzatura nel suo giardino .
+GER-ID=1907164
+GER-N: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
+
+ITA-ID=3102945
+ITA-N: Non è stato Tom che ha scaricato della spazzatura nel vostro giardino.
+ITA-L: non essere essere|stare Tom che avere scaricare del spazzatura nel vostro giardino .
+GER-ID=1907164
+GER-N: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
 
 
 
@@ -38,16 +37,18 @@ PROJECT STEPS
 - get translation of context sentences and word alignment
 
 - populate SQL database 
--> think of useful formats for these tables:
--> context sentences per lemma (and some sort of translation mapping?)
--> vocab piles: Bootstrap pile (A1/A2 words with translation)
----> All learned words (vocab the user has encountered anywhere in the app
----> Most difficult words (n most difficult words for user)
----> Most frequent Italian words (n most freq. words from the pile of all learned words)
+- think of useful formats for these tables:
+- context sentences per lemma (and some sort of translation mapping?)
+- vocab piles: Bootstrap pile (A1/A2 words with translation)
+- All learned words (vocab the user has encountered anywhere in the app
+- Most difficult words (n most difficult words for user)
+- Most frequent Italian words (n most freq. words from the pile of all learned words)
 
 - think of architecture for frontend and backend (data structures + user interface)
 
 - implement Java Servlets + Angular App
+
+
 
 
 |Workpackage<br>March 4, 2020|Description|Responsible|Related Git Files|Comment|
