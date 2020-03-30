@@ -10,7 +10,7 @@ CURRENT PROBLEMS
 	see also: https://tatoeba.org/eng/sentences/search?from=ita&to=deu&query=Non+%C3%A8+stato+Tom+che+ha+scaricato+della+spazzatura
 	example:
 
-	___ LEMMA: scaricare ____________________________________________________________________________________________
+	LEMMA: scaricare
 	[ITA-ID=3102946]
 	[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel tuo giardino.
 	[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel tuo giardino .
@@ -34,14 +34,19 @@ CURRENT PROBLEMS
 
 PROJECT STEPS
 - have useful context sentences for all Italian B1 and B2 lemmas available
+
 - get translation of context sentences and word alignment
-- populate SQL database -> think of useful formats for these tables:
-	-> context sentences per lemma (and some sort of translation mapping?)
-	-> vocab piles: Bootstrap pile (A1/A2 words with translation)
-			All learned words (vocab the user has encountered anywhere in the app
-			Most difficult words (n most difficult words for user)
-			Most frequent Italian words (n most freq. words from the pile of all learned words)
+
+- populate SQL database 
+-> think of useful formats for these tables:
+-> context sentences per lemma (and some sort of translation mapping?)
+-> vocab piles: Bootstrap pile (A1/A2 words with translation)
+---> All learned words (vocab the user has encountered anywhere in the app
+---> Most difficult words (n most difficult words for user)
+---> Most frequent Italian words (n most freq. words from the pile of all learned words)
+
 - think of architecture for frontend and backend (data structures + user interface)
+
 - implement Java Servlets + Angular App
 
 
