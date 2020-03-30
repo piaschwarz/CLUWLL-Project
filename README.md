@@ -10,25 +10,25 @@ CURRENT PROBLEMS
 	see also: https://tatoeba.org/eng/sentences/search?from=ita&to=deu&query=Non+%C3%A8+stato+Tom+che+ha+scaricato+della+spazzatura
 	example:
 
-	LEMMA: scaricare
-	[ITA-ID=3102946]
-	[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel tuo giardino.
-	[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel tuo giardino .
-	[GER-ID=1907164]
-	[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
-	---------------------------------------------------------------------------------------------------------------
-	[ITA-ID=3102947]
-	[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel suo giardino.
-	[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel suo giardino .
-	[GER-ID=1907164]
-	[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
-	---------------------------------------------------------------------------------------------------------------
-	[ITA-ID=3102945]
-	[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel vostro giardino.
-	[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel vostro giardino .
-	[GER-ID=1907164]
-	[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
-	---------------------------------------------------------------------------------------------------------------
+LEMMA: scaricare
+[ITA-ID=3102946]
+[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel tuo giardino.
+[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel tuo giardino .
+[GER-ID=1907164]
+[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
+--------------------------------------------------------------------------------------------------------------
+[ITA-ID=3102947]
+[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel suo giardino.
+[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel suo giardino .
+[GER-ID=1907164]
+[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
+--------------------------------------------------------------------------------------------------------------
+[ITA-ID=3102945]
+[ITA-N]: Non è stato Tom che ha scaricato della spazzatura nel vostro giardino.
+[ITA-L]: non essere essere|stare Tom che avere scaricare del spazzatura nel vostro giardino .
+[GER-ID=1907164]
+[GER-N]: Es war nicht Tom derjenige, der Müll in unserem Vorgarten abgeladen hat.
+---------------------------------------------------------------------------------------------------------------
 
 
 
