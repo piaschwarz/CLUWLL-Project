@@ -1,0 +1,38 @@
+MY WORK SO FAR (MARTA)
+
+
+1. I have been thinking about how to structure the final database (but so far I only have some sketches on paper, nothing implemented in sql yet)
+Important: keep the structure flexible, in order to add new columns at any time
+
+___________________
+
+
+2. Main issues in the context sentences:
+
+- (***MARTA***) lemmas should be associated with the right pos tag: pos tags from texts should be verified, I can do that manually. It wouldn’t take me longer than 2 days I think.
+This probably won’t allow us to find better context sentences, though! It is a step necessary for the sql database, it is about linking the lemma with the right pos tag from the original sentence.
+How to do that?
+First, I’ll take a look at the files that Pia made, the one isolating lemmas with less than 3 context sentences.
+I have noticed that the most problematic pos tags are adjectives//pronouns, conjunctions//adverbs, verbs//adjectives. 
+I can first try to isolate those cases 
+
+- (***PIA ?***) words from A1-A2 CEFR lists should be filtered out from the lemmatised lists deriving from B1-B2 texts (use table of inflections to make sure to catch all the possible inflections of the word)
+  I need to upload the file with the inflections.
+- problems of wrong translation: don’t know how to fix that yet
+
+__________________
+
+- Pia, did you consider adverbs as content words? Let’s discuss this
+
+
+- The point is: I can fix the lemmatizer wrong pos tags on the lemma lists, but I cannot fix the lemmatizer’s performance on the Tatoeba corpus.
+
+Possible solutions?
+
+a) (***MARTA/PIA***) Isolate the words which do not have enough context sentences, try to fix the problem working with the inflection rules I have from the other semester project → we apply inflection rules to the lemma and we generate more forms (keeping in mind the right pos tag!) and we try to find enough examples which contain all the different forms of that lemma.
+
+b) use the OpenSubtitles corpus to retrieve good context sentences (but if the lemmatizer keeps assigning pos tags wrongly also when applied to this corpus, we don’t have that much improvement
+
+c) manually type the problematic lemmas into Tatoeba, because we have seen that their search algorithm for relevant examples performs better than our lemmatizer.
+
+
