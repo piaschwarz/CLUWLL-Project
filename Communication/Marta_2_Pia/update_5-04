@@ -16,9 +16,11 @@ First, I’ll take a look at the files that Pia made, the one isolating lemmas w
 I have noticed that the most problematic pos tags are adjectives//pronouns, conjunctions//adverbs, verbs//adjectives. 
 I can first try to isolate those cases 
 
-- (***PIA ?***) words from A1-A2 CEFR lists should be filtered out from the lemmatised lists deriving from B1-B2 texts (use table of inflections to make sure to catch all the possible inflections of the word)
+- (***MARTA***) words from A1-A2 CEFR lists should be filtered out from the lemmatised lists deriving from B1-B2 texts (use table of inflections to make sure to catch all the possible inflections of the word)
   I need to upload the file with the inflections.
-- problems of wrong translation: don’t know how to fix that yet
+  
+  
+- problems of wrong translation: don’t know how to fix that yet (LEAVE THIS FOR NOW)
 
 __________________
 
