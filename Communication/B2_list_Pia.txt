@@ -9,6 +9,7 @@ riportare	VER:impf
 prevalenza	NOM
 cenetta	NOM
 caratteristico	ADJ
+maggiore	ADJ
 sociale	ADJ
 rispetto	NOM
 vita	NOM
@@ -122,7 +123,6 @@ mescolare	VER:pper
 gran	ADJ
 nascita	NOM
 circolare	VER:cimp
-dieci	ADJ
 invidia	NOM
 situare	VER:pper
 faunistico	ADJ
@@ -172,7 +172,6 @@ rinchiudere	VER:pper
 lupa	NOM
 tomba	NOM
 pauroso	ADJ
-quattro	ADJ
 evidente	ADJ
 pallino	NOM
 valle	NOM
@@ -250,7 +249,6 @@ aspetto	NOM
 riconoscere	VER:pper
 serie	NOM
 universitario	ADJ
-sette	ADJ
 cioccolatino	NOM
 ombra	NOM
 trucco	NOM
@@ -318,12 +316,10 @@ rete	NOM
 dolorante	ADJ
 dipendenza	NOM
 scolastico	ADJ
-ottanta	ADJ
 severamente	ADV
 comunità	NOM
 multimediale	ADJ
 scelto	ADJ
-mille	ADJ
 parere	VER:pres
 impegnare	VER:pper
 struttura	NOM
@@ -331,7 +327,6 @@ coperto	ADJ
 aperto	ADJ
 trasmettere	VER:pres
 rotella	NOM
-tre	ADJ
 utilizzare	VER:infi
 permettere	VER:pres
 componente	NOM
@@ -403,7 +398,6 @@ latino	ADJ
 partecipare	VER:remo
 comporre	VER:infi
 pietoso	ADJ
-quindici	ADJ
 bisognare	VER:cimp
 originale	ADJ
 cadere	VER:pper
@@ -458,19 +452,16 @@ riordinare	VER:geru
 compagnia	NOM
 nido	NOM
 generazione	NOM
-trenta	ADJ
 offendere	VER:cimp
 salvare	VER:infi
 riscontro	NOM
 scendere	VER:pper
 bilancio	NOM
 credibile	ADJ
-quinto	ADJ
 negativo	ADJ
 fornire	VER:pper
 percentuale	NOM
 accorrere	VER:pper
-cinquecento	ADJ
 contaminare	VER:pres
 zona	NOM
 esattamente	ADV
@@ -574,7 +565,6 @@ attrezzo	NOM
 personalità	NOM
 forestiero	ADJ
 assumere	VER:pper
-undici	ADJ
 dichiarare	VER:pper
 interrogazione	NOM
 risparmio	NOM
@@ -648,7 +638,6 @@ parere	NOM
 matematico	ADJ
 applicato	ADJ
 munire	VER:pper
-cinque	ADJ
 discendere	VER:impf
 cioccolata	NOM
 origine	NOM
@@ -671,7 +660,6 @@ prodotto	NOM
 finalmente	ADV
 imbiancare	VER:infi
 disabile	NOM
-sedici	ADJ
 insuccesso	NOM
 frazione	NOM
 fingere	VER:pper
@@ -773,11 +761,9 @@ accadere	VER:pres
 difficoltà	NOM
 testimonianza	NOM
 sostenere	VER:infi
-venti	ADJ
 bussare	VER:remo
 crollo	NOM
 noia	NOM
-migliore	NOM
 muratore	NOM
 edificio	NOM
 impresa	NOM
@@ -924,7 +910,6 @@ acquisire	VER:infi
 realmente	ADV
 riparare	VER:pper
 disporre	VER:pper
-due	ADJ
 intraprendere	VER:infi
 magnifico	NOM
 talento	NOM
@@ -1028,11 +1013,11 @@ romano	ADJ
 illegalmente	ADV
 evolutivo	ADJ
 alternare	VER:futu
+peggiore	ADJ
 fondare	VER:pper
 esploratore	NOM
 affidare	VER:pres
 rubare	VER:pper
-cento	ADJ
 monitorare	VER:pper
 accademico	ADJ
 interessato	ADJ
@@ -1186,7 +1171,7 @@ rasoio	NOM
 sguardo	NOM
 servire	VER:infi
 realtà	NOM
-buon	ADJ
+buono	ADJ
 conseguenza	NOM
 lista	NOM
 permettere	VER:pper
@@ -1197,7 +1182,6 @@ complicare	VER:remo
 sepolto	NOM
 curiosamente	ADV
 guadagnare	VER:pper
-centomila	ADJ
 degenza	NOM
 ricostruire	VER:pper
 bimbo	NOM
@@ -1258,7 +1242,6 @@ politico	NOM
 riferimento	NOM
 avvisare	VER:infi
 sopracciglio	NOM
-terzo	ADJ
 capitare	VER:pper
 quotidianamente	ADV
 radiofonico	ADJ
