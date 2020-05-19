@@ -1030,7 +1030,7 @@ tutti	ADJ	tutto
 noi	PRO:pers	noi
 occorre	VER:pres	occorrere
 un	DET:indef	un
-maggiore	ADJ	grande
+maggiore	ADJ	maggiore
 rispetto	NOM	rispetto
 per	PRE	per
 il	DET:def	il
@@ -1594,7 +1594,7 @@ viene	VER:pres	venire
 considerato	VER:pper	considerare
 un	DET:indef	un
 elemento	NOM	elemento
-importantissimo	ADJ	importante
+importante	ADJ	importante
 per	PRE	per
 capire	VER:infi	capire
 la	DET:def	il
@@ -2203,7 +2203,7 @@ oroscopo	NOM	oroscopo
 non	ADV	non
 era	VER:impf	essere
 dei	PRE:det	del
-migliori	NOM	migliore
+migliori	ADJ	migliore
 ,	PON	,
 addirittura	ADV	addirittura
 non	ADV	non
@@ -6071,7 +6071,7 @@ sono	VER:pres	essere
 di	PRE	di
 fare	VER:infi	fare
 un	DET:indef	un
-buon	ADJ	buon
+buon	ADJ	buono
 investimento	NOM	investimento
 ,	PON	,
 data	VER:pper	dare
@@ -7005,7 +7005,7 @@ contrario	NOM	contrario
 trovò	VER:remo	trovare
 subito	ADV	subito
 un	DET:indef	un
-buon	ADJ	buon
+buon	ADJ	buono
 nascondiglio	NOM	nascondiglio
 ,	PON	,
 ventilato	ADJ	ventilato
@@ -7420,7 +7420,7 @@ Napoli	NPR	Napoli
 c’	ADV	ci
 era	VER	essere
 un	DET:indef	un
-buon	ADJ	buon
+buon	ADJ	buono
 mercato	NOM	mercato
 .	SENT	.
 Una	DET:indef	una
@@ -10037,7 +10037,7 @@ Benissimo	ADJ	bene
 grazie	INT	grazie
 Stefano	NPR	Stefano
 ,	PON	,
-buon	ADJ	buon
+buon	ADJ	buono
 lavoro	NOM	lavoro
 .	SENT	.
 ”	NOM	”
@@ -10048,7 +10048,7 @@ Grazie	INT	grazie
 a	PRE	a
 voi	PRO	voi
 ,	PON	,
-buon	ADJ	buon
+buon	ADJ	buono
 lavoro	NOM	lavoro
 .	SENT	.
 ”	NOM	”
@@ -10271,7 +10271,7 @@ Oscar	NPR	Oscar
 Wilde	NPR	Wilde
 .	SENT	.
 La	DET:def	il
-peggiore	ADJ	cattivo
+peggiore	ADJ	peggiore
 maestra	NOM	maestro
 è	VER:pres	essere
 invece	CON	invece
@@ -10283,7 +10283,7 @@ Per	PRE	per
 Margherita	NPR	Margherita
 Hack	NPR	Hack
 i	DET:def	il
-peggiori	ADJ	cattivo
+peggiori	ADJ	peggiore
 maestri	NOM	maestro
 che	PRO:rela	che
 si	PRO:pers	si
@@ -10393,7 +10393,7 @@ sogni	NOM	sogno
 ”	NOM	”
 .	SENT	.
 Il	DET:def	il
-maggiore	ADJ	grande
+maggiore	ADJ	maggiore
 ostacolo	NOM	ostacolo
 che	PRO:rela	che
 ha	VER:pres	avere
