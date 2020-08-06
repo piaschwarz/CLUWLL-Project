@@ -1,1 +1,20 @@
-dummy
+- I have uploaded the whole Maven project, it is called CreateDBCluwll. I do not know if you can download it from here, 
+  since I have my doubts I will send it to you through Whatsapp too. 
+  Once you download it, you can import it into your IDE and create a New Maven Project from existing sources.
+  
+- check the version of your sql connector; the dependency is added in the pom.xml file, my version is  8.0.13
+
+- the creation of the database happens offline, in your mysql through the terminal.
+  The name of the database is "cluwll", and you create it through the  following command:
+  CREATE DATABASE cluwll CHARACTER SET utf8 COLLATE utf8_general_ci;
+  
+  then you create the table, called "static", through the following command:
+  CREATE TABLE static (lemma VARCHAR(20), pos VARCHAR(5), sent1ita TEXT, stringmatch1ita VARCHAR(20), sent1deu TEXT, stringmatch1deu VARCHAR(20), sent2ita TEXT, stringmatch2ita VARCHAR(20), sent2deu TEXT, stringmatch2deu VARCHAR(20), sent3ita TEXT, stringmatch3ita VARCHAR(20), sent3deu TEXT, stringmatch3deu VARCHAR(20), frequency INT);
+  
+
+- the java code (contained in the folder src) which populates the database is in the class called "CreateDB.java". 
+  What you need to change in the code are the user credentials (username, password), and the path of the file
+  "static_full_list.tsv", which is our static file with context sentences, stringmatches, etc...
+  
+  
+  I hope this is clear, if you need help just text me!
