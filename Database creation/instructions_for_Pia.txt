@@ -1,5 +1,5 @@
-- I have uploaded the whole Maven project, it is called CreateDBCluwll. I do not know if you can download it from here, 
-  since I have my doubts I will send it to you through Whatsapp too. 
+- I have uploaded the whole Maven project, it is called CreateDBCluwll. I have uploaded the whole project structure, but also the .jar file. I do not know if you can download it from here, since I have my doubts I will send it to you through Whatsapp too. 
+
   Once you download it, you can import it into your IDE and create a New Maven Project from existing sources.
   
 - check the version of your sql connector; the dependency is added in the pom.xml file, my version is  8.0.13
