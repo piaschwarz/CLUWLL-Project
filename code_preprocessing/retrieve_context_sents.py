@@ -29,7 +29,21 @@ Author: Pia Schwarz
 import csv
 from collections import defaultdict
 import ast
-from preprocess_tatoeba import dict_to_csv
+
+
+# converts dictionary to csv file
+def dict_to_csv(dictionary, out_file):
+    """ Converts a dictionary to csv file.
+        :arg
+            dictionary: the dict to convert
+            out_file: file path
+    """
+    with open(out_file, 'wt') as fo:
+        csv_writer = csv.writer(fo, delimiter='\t')
+        for id, sent in dictionary.items():
+            csv_writer.writerow([id, sent])
+    print("finished writing to file: ", out_file)
+
 
 def get_subtlex_content_word_freqs(subtlex_it_file):
     """ Retrieves the absolute frequencies of the dominant lemma form of a type from the file subtlex-it.csv
@@ -75,6 +89,7 @@ def load_file_as_dict(file, delimiter='\t'):
 
 if __name__ == '__main__':
 
+
     ####################################################################################################################
     # USE THIS BLOCK TO GET QUALITY CONTEXT SENTENCES FOR THE TARGET WORDS OF LEVEL B1 AND B2
 
@@ -84,13 +99,22 @@ if __name__ == '__main__':
     lemma_freqs = {k: int(v) for k, v in lemma_freqs.items()}  # type cast dict keys to integers
 
     # load the sentence lists for words from B1 and B2: key = lemma, value = sent. ID list containing this lemma
-    context_sents_lists = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/context_sentences_B1B2.csv")
+    context_sents_lists = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/" +
+                                            "final_output_context_sents/final_context_sentences_B1B2.csv")
     context_sents_lists = {k: ast.literal_eval(v) for k, v in context_sents_lists.items()}  # make sure that dict values are evaluated as lists
-
-    # load the lemmatized Italian sentences (called 'selected' becaus they have German translations available):
+    
+    # load the lemmatized Italian sentences (called 'selected' because they have German translations available):
     # key = ID, value = lemmatized Italian sentence
-    selected_sentences_lemma_ita = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/selected_sentences_lemma_ita.csv")
+    selected_sentences_lemma_ita = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/" +
+                                                     "selected_sentences_lemma_ita.csv")
     selected_sentences_lemma_ita = {int(k): v for k, v in selected_sentences_lemma_ita.items()}  # type cast dict keys to integers
+
+    # read in A1-B2 Italian words (CEFR) as a list which will be used to see how many content words are of these levels
+    A1toB2_words = []
+    with open("/home/pia/Schreibtisch/CLUWLL-Project/CEFR_A1_A2_B1_B2.tsv") as f:
+        csv_reader = csv.reader(f, delimiter='\t')
+        for row in csv_reader:
+            A1toB2_words.append(row[0])
 
     # create a dict with key = lemma and value = list that will contain the IDs of the sentences that are considered
     # quality sentences (have enough content words: target word + two content words)
@@ -98,8 +122,10 @@ if __name__ == '__main__':
 
     for key_lemma in context_sents_lists.keys():
 
-        print("\n--------------------------- LEMMA = " + key_lemma + "----------------------------------------------------------------------------------------")
-        #print("lemma: ", key_lemma, " - IDs before: ", context_sents_lists[key_lemma])
+        print("\n--------------------------- LEMMA = " + key_lemma + "-------------------------------------------")
+        if not context_sents_lists[key_lemma]:  # check if the list is empty
+            print("lemma: ", key_lemma, " has empty list: ", context_sents_lists[key_lemma])
+            lemma_context_useful[key_lemma] = []
 
         rankings = []  # collects the tuples (ID, average_content_word_frequency)
 
@@ -107,6 +133,7 @@ if __name__ == '__main__':
             lemmatized_sent = selected_sentences_lemma_ita[id]  # get single lemmatized sentence
             content_word_counter = 0  # counts the amount of low frequency content words in the lemmatized sentence
             content_word_freq = 0  # sums up the absolute frequency of all low frequency content words in the lemmatized sentence
+            count_A1toB2 = 0
 
             for word in lemmatized_sent.split():
                 if word != key_lemma:  # ignore the lemma which is the key of the ID dict
@@ -116,7 +143,23 @@ if __name__ == '__main__':
                         content_word_counter += 1
                         content_word_freq += lemma_freqs[word]
 
+                        # check if the content word is of level A1 to B2
+                        if word in A1toB2_words:
+                            count_A1toB2 += 1
+
+
             if content_word_counter >= 2:  # only consider sentences with enough content words
+
+                # check if less than 65% of the content words are in level A1-B2 -> then mark the ID as potentially disqualified
+                qualification_percentage = count_A1toB2/content_word_counter
+                if qualification_percentage >= 0.65:
+                    # HOW TO MARK IT so it can be restored? convert all disqualified sentence IDs to float and leave
+                    # qualified ones as integers
+                    id = int(id)
+                else:
+                    id = float(id)
+
+                # calculate average freq of all content words in a sentence
                 average_freq = int(content_word_freq / content_word_counter)
                 tup = (id, average_freq, content_word_counter)
                 rankings.append(tup)
@@ -133,16 +176,18 @@ if __name__ == '__main__':
             # add the sorted list to dict lemma_context_useful with: key = lemma, value = sorted list
             lemma_context_useful[key_lemma] = sorted_list
 
-        #print("lemma: ", key_lemma, " - IDs after: ", lemma_context_useful[key_lemma])
-
-    #dict_to_csv(lemma_context_useful, "/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/context_sentences_B1B2_quality.csv")
+    dict_to_csv(lemma_context_useful, "/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/"
+                                      "final_output_context_sents/" +
+                                      "final_context_sentences_B1B2_quality.csv")
     ####################################################################################################################
 
-    """
+
+
     ####################################################################################################################
     # USE THIS BLOCK TO SELECT FOR LEMMAS THAT HAVE FEWER THAN X CONTEXT SENTENCES - converts dictionary to csv file
     
-    out_file = "/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/B1B2_lemmas_with_less_than_3_context_sentences_quality.csv"
+    out_file = "/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/final_output_context_sents/" \
+               "final_B1B2_lemmas_with_less_than_3_context_sentences_quality.csv"
     dictionary = lemma_context_useful
     with open(out_file, 'wt') as fo:
         csv_writer = csv.writer(fo, delimiter='\t')
@@ -151,13 +196,19 @@ if __name__ == '__main__':
                 csv_writer.writerow([lemma, sent_list])
     print("finished writing to file: ", out_file)
     ####################################################################################################################
-    """
+
 
 
 
     ####################################################################################################################
-    # USE THIS BLOCK TO PRINT THE QUALITY CONTEXT SENTENCES IN ITALIAN (LEMMATIZED & NON-LEMMATIZED) AND THEIR GERMAN TRANSLATIONS TO A FILE
-    
+    # USE THIS BLOCK TO PRINT THE QUALITY CONTEXT SENTENCES IN ITALIAN (LEMMATIZED & NON-LEMMATIZED) AND THEIR GERMAN
+    # TRANSLATIONS TO A FILE
+
+    selected_sentences_lemma_ita = load_file_as_dict(
+        "/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/selected_sentences_lemma_ita.csv")
+    selected_sentences_lemma_ita = {int(k): v for k, v in
+                                    selected_sentences_lemma_ita.items()}  # type cast dict keys to integers
+
     selected_sentences_ita = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/selected_sentences_ita.csv")
     selected_sentences_ita = {int(k): v for k, v in selected_sentences_ita.items()}
 
@@ -167,22 +218,70 @@ if __name__ == '__main__':
     links_ita_deu = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/links_ita_deu.csv")
     links_ita_deu = {int(k): int(v) for k, v in links_ita_deu.items()}
 
-    quality_sents = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/context_sentences_B1B2_quality.csv")
+    quality_sents = load_file_as_dict("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba" +
+                                      "/final_output_context_sents/" +
+                                      "final_context_sentences_B1B2_quality.csv")
     quality_sents = {k: ast.literal_eval(v) for k, v in quality_sents.items()}
+    
 
-    with open("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/context_sentences_B1B2_quality_full.txt", 'wt') as f:
+    with open("/home/pia/Schreibtisch/CLUWLL-Project/preprocessing_tatoeba/final_output_context_sents/" +
+              "final_context_sentences_B1B2_quality_full.txt", 'wt') as f:
         for lemma, sent_list in quality_sents.items():
             f.write("___ LEMMA: " + lemma + " ____________________________________________________________________________________________\n")
             for i in sent_list:
+                is_qualified = True
+                if type(i) is float:  # sentences that contain more than 65% of words above level A1 to B2...
+                    is_qualified = False  # ...are "disqualified" - they are of type float in the file
+                    i = int(i)
                 s = selected_sentences_ita[i]
                 s_l = selected_sentences_lemma_ita[i]
                 german_id = links_ita_deu[i]
                 s_g = selected_sentences_deu[german_id]
+                if is_qualified:
+                    f.write("[ITA-ID=" + str(i) + "]\n")
+                    f.write("[ITA-N]: " + s + "\n")
+                    f.write("[ITA-L]: " + s_l + "\n")
+                    f.write("[GER-ID=" + str(german_id) + "]\n")
+                    f.write("[GER-N]: " + s_g + "\n")
+                else:
+                    f.write("*** [ITA-ID=" + str(i) + "]\n")
+                    f.write("*** [ITA-N]: " + s + "\n")
+                    f.write("*** [ITA-L]: " + s_l + "\n")
+                    f.write("*** [GER-ID=" + str(german_id) + "]\n")
+                    f.write("*** [GER-N]: " + s_g + "\n")
+                f.write("---------------------------------------------------------------------------------------------------------------\n")
+                f.writelines("\n")
+            f.writelines("\n\n")
+    ####################################################################################################################
+
+
+
+
+
+    ####################################################################################################################
+    # USE THIS BLOCK TO PRINT THE OPEN_SUBTITLES QUALITY CONTEXT SENTENCES IN ITALIAN (LEMMATIZED & NON-LEMMATIZED)
+    # ON UNI SERVER
+
+    sents_id_ita_deu = defaultdict(list)
+    with open("/home/pia/cluwll/opensubt_id_it_de.txt") as f:
+        csv_reader = csv.reader(f, delimiter='\t')
+        for row in csv_reader:
+            key = int(row[0])
+            value_ita = str(row[1])
+            value_deu = str(row[2])
+            sents_id_ita_deu[key] = [value_ita, value_deu]
+
+    with open("/home/pia/cluwll/openSubt_context_sents_quality_full.txt", 'wt') as f:
+        for lemma, sent_list in lemma_context_useful.items():
+            f.write("___ LEMMA: " + lemma + " ____________________________________________________________________________________________\n")
+            for i in sent_list:
+                s = sents_id_ita_deu[i][0]
+                s_l = selected_sentences_lemma_ita[i]
+                ger = sents_id_ita_deu[i][1]
                 f.write("[ITA-ID=" + str(i) + "]\n")
                 f.write("[ITA-N]: " + s + "\n")
                 f.write("[ITA-L]: " + s_l + "\n")
-                f.write("[GER-ID=" + str(german_id) + "]\n")
-                f.write("[GER-N]: " + s_g + "\n")
+                f.write("[DEU-N]: " + ger + "\n")
                 f.write("---------------------------------------------------------------------------------------------------------------\n")
             f.writelines("\n\n")
     ####################################################################################################################
